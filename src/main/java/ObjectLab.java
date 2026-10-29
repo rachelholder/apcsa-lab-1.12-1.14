@@ -135,9 +135,9 @@ public class ObjectLab
     public static int rectangleArea(int width, int height)
     {
         // TODO Part 1: build a Rectangle with new, then return its area()
-        return 0;
+        Rectangle r = new Rectangle(width, height);
+          return r.area();
     }
-
     // ---------------------------------------------------------------
     // PART 2: overloaded constructors, chosen by signature
     //
@@ -166,7 +166,9 @@ public class ObjectLab
     public static int bothAreas(int width, int height)
     {
         // TODO Part 2: build one Rectangle each way, return the sum of the areas
-        return 0;
+        Rectangle r1 = new Rectangle(width, height);
+        Rectangle r2 = new Rectangle();
+        return r1.area() + r2.area();
     }
 
     // ---------------------------------------------------------------
@@ -195,7 +197,9 @@ public class ObjectLab
     public static int countAfterAdding(int start, int points)
     {
         // TODO Part 3: build the Counter, call addPoints, then return getCount()
-        return 0;
+        Counter c = new Counter(start);
+        c.addPoints(points);
+        return c.getCount();
     }
 
     // ---------------------------------------------------------------
@@ -228,8 +232,10 @@ public class ObjectLab
     // ---------------------------------------------------------------
     public static void announceBuild(int size)
     {
-        // TODO Part 4: print "start", build a Timer with new, then print
-        // "back in announceBuild"
+        // TODO Part 4: print "start", build a Timer with new, print "back in main"
+        System.out.println("start");
+        Timer t = new Timer(size);
+        System.out.println("back in announceBuild");
     }
 
     // ---------------------------------------------------------------
@@ -266,6 +272,8 @@ public class ObjectLab
     public static int aliasTotal(int start, int points)
     {
         // TODO Part 5: two objects, three names -- see the steps above
+        Counter a = new Counter(start);
+        
         return 0;
     }
 
@@ -307,7 +315,9 @@ public class ObjectLab
     public static String compareTwoWays(String first, String second)
     {
         // TODO Part 6: return the == result, a space, then the .equals result
-        return "";
+        boolean a = first == second;
+        boolean b = first .equals(second);
+        return a + " " + b;
     }
 
     // ---------------------------------------------------------------
@@ -351,7 +361,8 @@ public class ObjectLab
     public static String nullReport(String first, String second)
     {
         // TODO Part 7: return the two == null results, separated by one space
-        return "";
+        
+        return (first == null) + " " + (second == null);
     }
 
     // ---------------------------------------------------------------
