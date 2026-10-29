@@ -273,8 +273,10 @@ public class ObjectLab
     {
         // TODO Part 5: two objects, three names -- see the steps above
         Counter a = new Counter(start);
-        
-        return 0;
+        Counter b = a;
+        Counter c = new Counter(start);
+        b.addPoints(points);
+        return a.getCount() + c.getCount();
     }
 
     // ---------------------------------------------------------------
